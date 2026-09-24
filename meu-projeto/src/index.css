@@ -1591,3 +1591,348 @@ body {
     opacity: 1;
   }
 }
+
+/* ==========================================================================
+   SEÇÃO VENDER / AVALIAR ACERVO (100% CSS PURO)
+   ========================================================================== */
+
+.vender-section {
+  background: linear-gradient(135deg, #184343 0%, #15383a 50%, #0e2029 100%);
+  padding: 4rem 1rem;
+  color: #ffffff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.vender-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.vender-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .vender-grid {
+    grid-template-columns: 1fr 1.2fr;
+  }
+}
+
+/* Coluna de Informações (Esquerda) */
+.vender-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.vender-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #7de3e0;
+  padding: 0.4rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  width: fit-content;
+}
+
+.vender-title {
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.15;
+  color: #ffffff;
+  margin: 0;
+}
+
+@media (min-width: 640px) {
+  .vender-title {
+    font-size: 2.5rem;
+  }
+}
+
+.vender-desc {
+  color: #bce3e1;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.vender-steps {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.vender-step-item {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  color: #e0f2f1;
+  font-size: 0.875rem;
+}
+
+.vender-step-num {
+  width: 1.625rem;
+  height: 1.625rem;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #52ded4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.75rem;
+  flex-shrink: 0;
+}
+
+.vender-guarantee {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 1rem;
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.vender-guarantee-icon {
+  font-size: 2rem;
+  color: #42cbbd;
+  flex-shrink: 0;
+}
+
+.vender-guarantee-text {
+  font-size: 0.75rem;
+  color: #a8c8c7;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Card do Formulário (Direita) */
+.vender-card {
+  background-color: #ffffff;
+  border-radius: 1.75rem;
+  padding: 2rem;
+  color: #1e293b;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+@media (min-width: 640px) {
+  .vender-card {
+    padding: 2.5rem;
+  }
+}
+
+.vender-card-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 0.25rem 0;
+}
+
+.vender-card-subtitle {
+  font-size: 0.75rem;
+  color: #64748b;
+  margin: 0 0 1.5rem 0;
+}
+
+.vender-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.vender-row-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .vender-row-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.vender-row-3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .vender-row-3 {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.vender-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+.vender-label {
+  font-size: 0.6875rem;
+  font-weight: 800;
+  color: #334155;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.vender-input,
+.vender-select {
+  width: 100%;
+  background-color: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  color: #0f172a;
+  outline: none;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+
+.vender-input::placeholder {
+  color: #94a3b8;
+}
+
+.vender-input:focus,
+.vender-select:focus {
+  background-color: #ffffff;
+  border-color: #38a3a5;
+  box-shadow: 0 0 0 3px rgba(56, 163, 165, 0.15);
+}
+
+/* Remover flechas numéricas padrão do input number */
+.vender-input[type="number"]::-webkit-inner-spin-button,
+.vender-input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.vender-input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Area de Dropzone (Upload) */
+.vender-dropzone {
+  border: 2px dashed #a5d8d6;
+  background-color: #f6fbfb;
+  border-radius: 1rem;
+  padding: 1.25rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.vender-dropzone:hover,
+.vender-dropzone.dragging {
+  border-color: #38a3a5;
+  background-color: #edf8f8;
+}
+
+.vender-dropzone-icon {
+  font-size: 1.75rem;
+  color: #38a3a5;
+  margin-bottom: 0.25rem;
+}
+
+.vender-dropzone-text {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #334155;
+  margin: 0;
+}
+
+.vender-dropzone-subtext {
+  font-size: 0.625rem;
+  color: #94a3b8;
+  margin: 0.25rem 0 0 0;
+}
+
+.vender-file-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 0.75rem;
+}
+
+.vender-file-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  padding: 0.25rem 0.625rem;
+  border-radius: 0.5rem;
+  font-size: 0.6875rem;
+  color: #334155;
+}
+
+/* Botão Enviar */
+.vender-btn {
+  width: 100%;
+  background-color: #38a3a5;
+  color: #ffffff;
+  border: none;
+  border-radius: 0.75rem;
+  padding: 0.875rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  margin-top: 0.5rem;
+}
+
+.vender-btn:hover {
+  background-color: #2e8b8d;
+}
+
+.vender-btn:active {
+  transform: scale(0.99);
+}
+
+/* Mensagem de Sucesso */
+.vender-success {
+  text-align: center;
+  padding: 2.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.vender-success-icon {
+  font-size: 3.5rem;
+  color: #10b981;
+}
+
+.vender-success-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0;
+}
+
+.vender-success-desc {
+  font-size: 0.875rem;
+  color: #64748b;
+  margin: 0;
+}
