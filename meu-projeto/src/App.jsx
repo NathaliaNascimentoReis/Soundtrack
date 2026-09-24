@@ -1,5 +1,6 @@
 import React from 'react'
 import Header from './components/Header'
+import Footer from './components/Footer'
 import Hero from './components/Hero'
 import Catalog from './components/Catalog'
 import Formulario from './components/Formulario' // <--- Importe aqui
@@ -13,6 +14,7 @@ function App() {
           <Catalog />
           <Formulario /> {/* <--- Adicionado na Home */}
         </main>
+        <Footer />
       </div>
   )
 }
